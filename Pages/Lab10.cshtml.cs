@@ -25,6 +25,13 @@ namespace Lab10_AdvBusProg.Pages
         [StringLength(15)]
         public string LastName {get; set;}
 
+        [BindProperty]
+        [Display(Name = "Credit Card")]
+        [Required]
+        [CreditCard]
+        public string CreditCard {get; set;}
+
+
         private readonly ILogger _log;
         public Lab10Model(ILogger<Lab10Model> log)
         {
